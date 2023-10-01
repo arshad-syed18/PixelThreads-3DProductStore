@@ -23,7 +23,7 @@ const CameraRig = ({ children }) => {
         }
 
         //set camera position
-        easing.damp3(state.camera.position, targetPosition, 0.25, delta)
+        easing.damp3(state.camera.position, targetPosition, 0.25, delta);
 
         easing.dampE(
             group.current.rotation,
