@@ -33,9 +33,26 @@ const Customizer = () => {
                     readFile={readFile}
                 />;
             case "aipicker":
-                return <AIPicker />;
+                return <AIPicker
+                    prompt={prompt}
+                    setPrompt={setPrompt}
+                    generatingImg={generatingImg}
+                    handleSumbit={handleSumbit}
+                />;
             default:
                 return null;
+        }
+    }
+    const handleSumbit = async (type) => {
+        if (prompt === '') return alert('Please enter a prompt');
+
+        try {
+
+        } catch (error) {
+            alert(error)
+        } finally {
+            setGeneratingImg(false)
+            setActiveEditorTab("")
         }
     }
     const handleDecals = (type, result) => {
