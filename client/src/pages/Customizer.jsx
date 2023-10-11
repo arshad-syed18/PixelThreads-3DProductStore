@@ -37,16 +37,31 @@ const Customizer = () => {
                     prompt={prompt}
                     setPrompt={setPrompt}
                     generatingImg={generatingImg}
-                    handleSumbit={handleSumbit}
+                    handleSubmit={handleSubmit}
                 />;
             default:
                 return null;
         }
     }
-    const handleSumbit = async (type) => {
+    const handleSubmit = async (type) => {
         if (prompt === '') return alert('Please enter a prompt');
 
         try {
+            setGeneratingImg(true);
+
+            const response = await fetch(config.development.backendUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ prompt }),
+            })
+
+            if (response) {
+                const data = await response.json();
+
+                handleDecals(type, `data:image/png;base64,${data.image}`)
+            }
 
         } catch (error) {
             alert(error)
