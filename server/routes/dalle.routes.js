@@ -20,7 +20,6 @@ router.route('/').post(async (req, res) => {
         console.error(error);
         res.status(500).json({ message: 'Internal Server Error' });
     }
-    console.log(response);
 })
 
 router.route('/').get((req, res) => {
