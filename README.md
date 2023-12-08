@@ -11,6 +11,16 @@ Below, is a brief overview of the project and its dependencies.
 - **Texture Customization**: Upload your own textures to create unique designs.
 - **AI-Powered Design Generation**: Use DALL·E AI to generate logos and textures based on your prompts.
 
+## Getting Started
+1. Clone the repository.
+2. Set up the server dependencies using npm install in the server directory.
+3. Set up the client dependencies using npm install in the client directory.
+4. Start the server and client applications.
+    - server start command : npm start
+    - client start command : npm run dev
+5. Explore and customize T-Shirts in 3D!
+
+
 ## Screenshots
 ### Landing Page
 ![Landing Page](/images/1.JPG)
@@ -23,15 +33,6 @@ Below, is a brief overview of the project and its dependencies.
 
 ### Setting AI Texture 
 ![Setting AI Texture ](/images/4.JPG)
-
-## Getting Started
-1. Clone the repository.
-2. Set up the server dependencies using npm install in the server directory.
-3. Set up the client dependencies using npm install in the client directory.
-4. Start the server and client applications.
-    - server start command : npm start
-    - client start command : npm run dev
-5. Explore and customize T-Shirts in 3D!
 
 ## Contributing
 Contributions from the community are welcome. If you'd like to enhance the project or fix issues, please fork the repository and create a pull request.
