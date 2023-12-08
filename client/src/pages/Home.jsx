@@ -16,8 +16,11 @@ const Home = () => {
         <AnimatePresence>
             {snap.intro && (
                 <motion.section className='home' {...slideAnimation('left')}>
-                    <motion.header {...slideAnimation('down')}>
-                        <img src='./threejs.png' alt='threejs' className='w-8 h-8 object-contain' />
+                    <motion.header className='flex' {...slideAnimation('down')}>
+                        <img src='./threejs.png' alt='threejs' className='w-8 h-8 object-contain mr-4' />
+                        <div className='flex flex-col gap-1 mt-[-5px]'>
+                            <h1 className='font-bold tracking-wider text-4xl text-gray-800 '>PixelThreads</h1>
+                        </div>
                     </motion.header>
                     <motion.div className='home-content' {...headContainerAnimation}>
                         <motion.div {...headTextAnimation}>
