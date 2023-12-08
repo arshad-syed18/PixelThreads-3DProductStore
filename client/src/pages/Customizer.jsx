@@ -59,8 +59,9 @@ const Customizer = () => {
 
             if (response) {
                 const data = await response.json();
-
-                handleDecals(type, `data:image/png;base64,${data.image}`)
+                const imageData = data.photo.images[0];
+                console.log(imageData);
+                handleDecals(type, `data:image/png;base64,${imageData}`)
             }
 
         } catch (error) {
