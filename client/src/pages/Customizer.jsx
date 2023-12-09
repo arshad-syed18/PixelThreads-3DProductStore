@@ -117,7 +117,7 @@ const Customizer = () => {
         setActiveModelTab({
             ...Object.fromEntries(Object.keys(activeModelTab).map(name => [name, name === model])),
         });
-        state.model = model;
+        state.model = model; // set model in canvas index
         console.log(state.model)
     }
 
