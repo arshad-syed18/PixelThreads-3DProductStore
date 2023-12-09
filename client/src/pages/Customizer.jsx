@@ -5,7 +5,7 @@ import config from '../config/config';
 import state from '../store';
 import { download } from '../assets';
 import { downloadCanvasToImage, reader } from '../config/helpers';
-import { EditorTabs, FilterTabs, DecalTypes } from '../config/constants';
+import { EditorTabs, FilterTabs, DecalTypes, modelTabs } from '../config/constants';
 import { fadeAnimation, slideAnimation } from '../config/motion';
 import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
 
@@ -19,6 +19,11 @@ const Customizer = () => {
     const [activeFilterTab, setActiveFilterTab] = useState({
         logoShirt: true,
         stylishShirt: false,
+    });
+    // Use same key name as set in modelTabs in constants
+    const [activeModelTab, setActiveModelTab] = useState({
+        tshirt: true,
+        poloShirt: false,
     });
 
     //show tab content based on active tab
@@ -108,6 +113,14 @@ const Customizer = () => {
             })
     }
 
+    const handleChangeModel = (model) => {
+        setActiveModelTab({
+            ...Object.fromEntries(Object.keys(activeModelTab).map(name => [name, name === model])),
+        });
+        state.model = model;
+        console.log(state.model)
+    }
+
     return (
         <AnimatePresence>
             {!snap.intro && (
@@ -127,6 +140,7 @@ const Customizer = () => {
                                             if (activeEditorTab === tab.name) return setActiveEditorTab("")
                                             else setActiveEditorTab(tab.name)
                                         }}
+                                        helperText={tab.helperText}
                                     />
                                 ))}
 
@@ -150,11 +164,31 @@ const Customizer = () => {
                                 isFilterTab
                                 isActiveTab={activeFilterTab[tab.name]}
                                 handleClick={() => handleActiveFilterTab(tab.name)}
+                                helperText={tab.helperText}
                             />
                         ))}
                         <button className='download-btn' onClick={downloadCanvasToImage}>
                             <img src={download} alt="download" className='w-3/5 h-3/5 object-contain' />
                         </button>
+                    </motion.div>
+                    <motion.div
+                        key="modelsAI"
+                        className='absolute top-0 right-0 z-10'
+                        {...slideAnimation("right")}
+                    >
+                        <div className='flex items-center min-h-screen'>
+                            <div className='modeltabs-container tabs'>
+                                <p className='text-sm text-gray-500 my-[-5px]'>Models</p>
+                                {modelTabs.map((tab, index) => (
+                                    <Tab
+                                        key={tab.name}
+                                        tab={tab}
+                                        handleClick={() => handleChangeModel(tab.name)}
+                                        helperText={tab.helperText}
+                                    />
+                                ))}
+                            </div>
+                        </div>
                     </motion.div>
                 </>
             )}

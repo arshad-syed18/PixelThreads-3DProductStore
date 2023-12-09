@@ -39,6 +39,10 @@ html {
   @apply glassmorphism w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-4 gap-4;
 }
 
+.modeltabs-container {
+  @apply glassmorphism w-16 border-[2px] rounded-lg flex flex-col justify-center items-center mr-1 py-4 gap-4;
+}
+
 .filtertabs-container {
   @apply absolute z-10 bottom-5 right-0 left-0 w-full flex justify-center items-center flex-wrap gap-4;
 }
