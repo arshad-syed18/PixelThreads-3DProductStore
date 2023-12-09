@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber'
 import { Decal, useGLTF, useTexture } from '@react-three/drei'
 import state from '../store'
 
-const Shirt = () => {
+export function Shirt() {
     const snap = useSnapshot(state);
     const { nodes, materials } = useGLTF('/shirt_baked.glb');
 
@@ -15,10 +15,10 @@ const Shirt = () => {
     //used to apply color smoothly, transition from one color to another
     useFrame((state, delta) => easing.dampC(materials.lambert1.color, snap.color, 0.25, delta));
 
-    const stateString = JSON.stringify(snap);
     return (
         <group
-            key={stateString}
+            key="tshirt"
+            position={[0, 0.04, -0.0024]}
         >
             <mesh
                 castShadow
@@ -50,5 +50,3 @@ const Shirt = () => {
         </group>
     )
 }
-
-export default Shirt

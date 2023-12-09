@@ -9,6 +9,7 @@ export function Tshirt() {
   const snap = useSnapshot(state);
   const { nodes, materials } = useGLTF('/tshirt/source/tshirt.glb')
   materials['Polo Shirt'].map = null;
+  materials['Button'].color = { r: 0, g: 0, b: 0 };
 
   const logoTexture = useTexture(snap.logoDecal);
   const fullTexture = useTexture(snap.fullDecal);
@@ -16,17 +17,17 @@ export function Tshirt() {
   useFrame((state, delta) => easing.dampC(materials['Polo Shirt'].color, snap.color, 0.25, delta));
 
   return (
-    <group position={[0, 0.04, -0.0024]}>
+    <group position={[0, 0.04, -0.0024]} key="poloShirt">
       <mesh
         castShadow
-        geometry={nodes.default004.geometry}
+        geometry={nodes.default002.geometry}
         material={materials['Polo Shirt']}
         material-roughness={1}
         dispose={null}
       >
         {snap.isFullTexture && (
           <Decal
-            position={[0.1, 0.3, 0]}
+            position={[0, 0, 0]}
             rotation={[0, 0, 0]}
             scale={1}
             map={fullTexture}
@@ -35,7 +36,7 @@ export function Tshirt() {
         )}
         {snap.isLogoTexture && (
           <Decal
-            position={[0.08, 0.53, 0.1]}
+            position={[0.09, 0.14, 0.1]}
             rotation={[0, 0, 0]}
             scale={0.05}
             map={logoTexture}
@@ -45,7 +46,7 @@ export function Tshirt() {
           />
         )}
       </mesh>
-      <mesh geometry={nodes.default004_1.geometry} material={materials.Button} />
+      <mesh geometry={nodes.default002_1.geometry} material={materials.Button} />
     </group>
   )
 }

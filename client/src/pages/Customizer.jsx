@@ -78,10 +78,10 @@ const Customizer = () => {
     const handleDecals = (type, result) => {
         const decalType = DecalTypes[type];
         // set decal type
-        state[decalType.stateProperty] = result;
+        state[decalType.stateProperty] = result
 
-        if (!activeFilterTab[decalType.FilterTabs]) {
-            handleActiveFilterTab(decalType.FilterTabs)
+        if (!activeFilterTab[decalType.filterTab]) {
+            handleActiveFilterTab(decalType.filterTab)
         }
     }
     const handleActiveFilterTab = (tabName) => {
@@ -118,7 +118,6 @@ const Customizer = () => {
             ...Object.fromEntries(Object.keys(activeModelTab).map(name => [name, name === model])),
         });
         state.model = model; // set model in canvas index
-        console.log(state.model)
     }
 
     return (
