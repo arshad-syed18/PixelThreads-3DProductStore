@@ -11,6 +11,7 @@ const apiKey = process.env.WIZMODEL_API_KEY; // Replace YOUR_API_KEY with your a
 const apiUrl = "https://api.wizmodel.com/sdapi/v1/txt2img";
 
 router.route('/').post(async (req, res) => {
+    console.log("Image Requested!")
     try {
         const { prompt } = req.body;
 
@@ -27,6 +28,13 @@ router.route('/').post(async (req, res) => {
         });
 
         const result = await response.json();
+
+        if (result) {
+            console.log("Image Reieved!")
+        } else {
+            console.log("Image Not Recieved!");
+            return res.status(500).json({ message: 'Internal Server Error' });
+        }
 
         res.status(200).json({ photo: result });
     } catch (error) {
