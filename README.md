@@ -1,15 +1,16 @@
-# 3D Product Store
+# PixelThreads - 3D Product Store
 
-Welcome to the 3D Product Store, a unique e-commerce experience that allows users to customize and visualize T-Shirts in 3D. 
-This platform enables users to pick shirt colors, upload logos and textures, and even generate designs using DALL·E AI.
+Welcome to PixelThreads, a 3D Product Store that offers a unique e-commerce experience, allowing users to customize and visualize clothes in 3D. 
+This platform enables users to pick shirt colors, upload logos and textures, and even generate designs using Stable Diffusion AI for different clothing items.
 This platform was developed using React, Threejs, framer motion and tailwindcss. 
 Below, is a brief overview of the project and its dependencies.
 
 ## Features
-- **3D T-Shirt Visualization**: See your T-Shirt designs come to life in a 3D model.
-- **Color Picker**: Choose from a wide range of colors for your shirt.
+- **3D T-Shirt Visualization**: See your T-Shirt designs come to life in a lifelike 3D model.
+- **Diverse Wardrobe Selection**: Explore and select from an extensive range of wardrobe options.
+- **Color Picker**: Explore a diverse palette to personalize your shirt. Mix and match colors for various components such as button accents.
 - **Texture Customization**: Upload your own textures to create unique designs.
-- **AI-Powered Design Generation**: Use DALL·E AI to generate logos and textures based on your prompts.
+- **AI-Driven Design Creation**: Employ Stable Diffusion AI for effortless logo and texture generation based on your creative prompts.
 
 ## Getting Started
 1. Clone the repository.
@@ -18,8 +19,10 @@ Below, is a brief overview of the project and its dependencies.
 4. Start the server and client applications.
     - server start command : npm start
     - client start command : npm run dev
-5. Explore and customize T-Shirts in 3D!
+5. Explore and customize Clothes in 3D!
 
+Note: Easily add other clothing items by referencing the `Tshirt.jsx` file and incorporating additional 3D models. 
+Quickly generate geometry and mesh for your model using the command `npx gltfjsx model.glb`.
 
 ## Screenshots
 ### Landing Page
