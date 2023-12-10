@@ -1,4 +1,4 @@
-# PixelThreads - 3D Product Store
+# PixelThreads - A 3D Product Store
 
 Welcome to PixelThreads, a 3D Product Store that offers a unique e-commerce experience, allowing users to customize and visualize clothes in 3D. 
 This platform enables users to pick shirt colors, upload logos and textures, and even generate designs using Stable Diffusion AI for different clothing items.
