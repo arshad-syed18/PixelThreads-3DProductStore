@@ -34,5 +34,8 @@ Below, is a brief overview of the project and its dependencies.
 ### Setting AI Texture 
 ![Setting AI Texture ](/images/4.JPG)
 
+### Switching Product
+![Changing The Model](/images/5.JPG)
+
 ## Contributing
 Contributions from the community are welcome. If you'd like to enhance the project or fix issues, please fork the repository and create a pull request.
