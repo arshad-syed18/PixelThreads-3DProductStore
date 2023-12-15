@@ -3,7 +3,8 @@
 Welcome to PixelThreads, a 3D Product Store that offers a unique e-commerce experience, allowing users to customize and visualize clothes in 3D. 
 This platform enables users to pick shirt colors, upload logos and textures, and even generate designs using Stable Diffusion AI for different clothing items.
 This platform was developed using React, Threejs, framer motion and tailwindcss. 
-Below, is a brief overview of the project and its dependencies.
+Below, is a brief overview of the project and its dependencies.<br />
+Try it out at https://pixelthreads-emgv.onrender.com/
 
 ## Features
 - **3D T-Shirt Visualization**: See your T-Shirt designs come to life in a lifelike 3D model.
