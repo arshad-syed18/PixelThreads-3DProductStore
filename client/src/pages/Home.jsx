@@ -12,6 +12,7 @@ import { CustomButton } from '../components'
 import { logo } from '../assets'
 
 const Home = () => {
+    // test commit check
     const snap = useSnapshot(state)
     return (
         <AnimatePresence>
