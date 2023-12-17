@@ -51,6 +51,10 @@ html {
   @apply absolute left-full ml-3 glassmorphism p-3 w-[195px] h-[220px] rounded-md flex flex-col gap-4;
 }
 
+.mousemovement-container {
+  @apply absolute left-full ml-3 glassmorphism p-3 w-[195px] h-[100px] rounded-md flex flex-col gap-4;
+}
+
 .aipicker-textarea {
   @apply w-full bg-transparent text-sm border border-gray-300 p-2 outline-none flex-1;
 }

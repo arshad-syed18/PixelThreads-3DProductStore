@@ -10,7 +10,7 @@ import { useSnapshot } from 'valtio'
 import state from '../store'
 
 
-const CanvasModel = () => {
+const CanvasModel = ({ mouseMovement }) => {
     const snap = useSnapshot(state)
 
     const generateModel = () => {
@@ -35,7 +35,7 @@ const CanvasModel = () => {
             <ambientLight position={[0, 0, 5]} intensity={0.5} />
             <directionalLight castShadow position={[0, 0, 5]} intensity={0.7} />
             <Environment preset="city" />
-            <CameraRig rotateWithClick={true}>
+            <CameraRig rotateWithClick={mouseMovement}>
 
                 {generateModel()}
             </CameraRig>

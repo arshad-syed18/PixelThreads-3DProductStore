@@ -1,4 +1,4 @@
-import { swatch, fileIcon, ai, logoShirt, stylishShirt } from "../assets";
+import { swatch, fileIcon, ai, logoShirt, stylishShirt, mouse } from "../assets";
 
 export const EditorTabs = [
   {
@@ -16,6 +16,11 @@ export const EditorTabs = [
     icon: ai,
     helperText: "AI",
   },
+  {
+    name: "mouseMovement",
+    icon: mouse,
+    helperText: "Mouse",
+  }
 ];
 
 export const FilterTabs = [

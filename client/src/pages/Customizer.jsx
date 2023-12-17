@@ -7,10 +7,10 @@ import { download } from '../assets';
 import { downloadCanvasToImage, reader } from '../config/helpers';
 import { EditorTabs, FilterTabs, DecalTypes, modelTabs } from '../config/constants';
 import { fadeAnimation, slideAnimation } from '../config/motion';
-import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
+import { AIPicker, ColorPicker, CustomButton, FilePicker, MouseMovement, Tab } from '../components';
 
 
-const Customizer = () => {
+const Customizer = ({ mouseMovement, handleMouseMove }) => {
     const snap = useSnapshot(state);
     const [file, setFile] = useState('');
     const [prompt, setPrompt] = useState('');
@@ -44,9 +44,18 @@ const Customizer = () => {
                     generatingImg={generatingImg}
                     handleSubmit={handleSubmit}
                 />;
+            case "mouseMovement":
+                return <MouseMovement
+                    mouseMovement={mouseMovement}
+                    handleMouseSubmit={handleMouseSubmit}
+                />;
             default:
                 return null;
         }
+    }
+    const handleMouseSubmit = () => {
+        handleMouseMove();
+        setActiveEditorTab("");
     }
     const handleSubmit = async (type) => {
         if (prompt === '') return alert('Please enter a prompt');
