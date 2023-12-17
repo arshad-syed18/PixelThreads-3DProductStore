@@ -8,4 +8,8 @@ import stylishShirt from "./stylish-tshirt.png";
 import logo from "./logo.png";
 import mouse from "./mouse.png";
 
-export { ai, fileIcon, swatch, download, logoShirt, stylishShirt, logo, mouse };
+import mug from "./mug.png";
+import diary from "./diary.png";
+import poloShirt from "./polo.png";
+
+export { ai, fileIcon, swatch, download, logoShirt, stylishShirt, logo, mouse, mug, diary, poloShirt };
