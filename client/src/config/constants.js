@@ -1,4 +1,4 @@
-import { swatch, fileIcon, ai, logoShirt, stylishShirt, mouse } from "../assets";
+import { swatch, fileIcon, ai, logoShirt, stylishShirt, mouse, poloShirt, mug, diary } from "../assets";
 
 export const EditorTabs = [
   {
@@ -43,9 +43,19 @@ export const modelTabs = [ // Limit helpertext length to 6-7 characters
   },
   {
     name: "poloShirt",
-    icon: stylishShirt, // TODO: change to poloShirt icon
+    icon: poloShirt, // TODO: change to poloShirt icon
     helperText: "Polo",
   },
+  {
+    name: 'mug',
+    icon: mug, // TODO: change to mug icon
+    helperText: "Mug",
+  },
+  {
+    name: 'diary',
+    icon: diary, // TODO: change to diary icon
+    helperText: 'Diary',
+  }
 ];
 
 export const DecalTypes = {
