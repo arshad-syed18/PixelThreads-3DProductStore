@@ -8,6 +8,8 @@ import CameraRig from './CameraRig'
 import { Tshirt } from './Tshirt'
 import { useSnapshot } from 'valtio'
 import state from '../store'
+import { Mug } from './Mug'
+import Diary from './Diary'
 
 
 const CanvasModel = ({ mouseMovement }) => {
@@ -19,6 +21,10 @@ const CanvasModel = ({ mouseMovement }) => {
                 return <Shirt key="tshirt" />
             case 'poloShirt':
                 return <Tshirt key="poloShirt" />
+            case 'mug':
+                return <Mug key="mug" />
+            case 'diary':
+                return <Diary key="diary" />
             default:
                 return null;
         }
