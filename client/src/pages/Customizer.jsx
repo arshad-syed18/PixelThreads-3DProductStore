@@ -129,6 +129,10 @@ const Customizer = ({ mouseMovement, handleMouseMove }) => {
         state.model = model; // set model in canvas index
     }
 
+    const handleFeedbackClick = () => {
+        window.open("https://forms.gle/Uod1AUuB53vWhpqH6", "_blank")
+    }
+
     return (
         <AnimatePresence>
             {!snap.intro && (
@@ -155,6 +159,14 @@ const Customizer = ({ mouseMovement, handleMouseMove }) => {
                                 {generateTabContent()}
                             </div>
                         </div>
+                    </motion.div>
+                    <motion.div className='absolute z-10 top-5 left-5' {...fadeAnimation}>
+                        <CustomButton
+                            type="filled"
+                            title="Feedback"
+                            handleClick={handleFeedbackClick}
+                            customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+                        />
                     </motion.div>
                     <motion.div className='absolute z-10 top-5 right-5' {...fadeAnimation}>
                         <CustomButton
