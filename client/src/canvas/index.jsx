@@ -31,11 +31,12 @@ const CanvasModel = () => {
             className='w-full max-w-full h-full transition-all ease-in'
             position={[0, 0, 0]}
         >
-            <ambientLight intensity={0.5} />
+            <Backdrop />
+            <ambientLight position={[0, 0, 5]} intensity={0.5} />
+            <directionalLight castShadow position={[0, 0, 5]} intensity={0.7} />
             <Environment preset="city" />
+            <CameraRig rotateWithClick={true}>
 
-            <CameraRig>
-                <Backdrop />
                 {generateModel()}
             </CameraRig>
         </Canvas >
