@@ -33,6 +33,8 @@ export function Shirt() {
                         rotation={[0, 0, 0]}
                         scale={1}
                         map={fullTexture}
+                        depthTest={true} // or false, depending on your needs
+                        depthWrite={true} // or false, depending on your needs
                     />
                 )}
                 {snap.isLogoTexture && (

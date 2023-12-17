@@ -32,6 +32,8 @@ export function Tshirt() {
             scale={1}
             map={fullTexture}
             opacity={0}
+            depthTest={true} // or false, depending on your needs
+            depthWrite={true} // or false, depending on your needs
           />
         )}
         {snap.isLogoTexture && (
